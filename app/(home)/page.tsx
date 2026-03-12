@@ -18,15 +18,6 @@ export default function HomePage() {
           </p>
         </Link>
         <Link
-          href="/api"
-          className="flex flex-col gap-2 rounded-lg border bg-fd-card p-6 transition-colors hover:bg-fd-accent"
-        >
-          <h2 className="text-lg font-semibold">API Reference</h2>
-          <p className="text-sm text-fd-muted-foreground">
-            API reference documentation.
-          </p>
-        </Link>
-        <Link
           href="/templates"
           className="flex flex-col gap-2 rounded-lg border bg-fd-card p-6 transition-colors hover:bg-fd-accent"
         >
