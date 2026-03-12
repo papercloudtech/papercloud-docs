@@ -1,0 +1,7 @@
+{
+  "title": "CLI",
+  "description": "CLI Reference",
+  "icon": "Terminal",
+  "root": true,
+  "pages": ["index", "..."]
+}

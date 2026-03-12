@@ -1,0 +1,7 @@
+{
+  "title": "API",
+  "description": "API Reference",
+  "icon": "Braces",
+  "root": true,
+  "pages": ["index", "..."]
+}
