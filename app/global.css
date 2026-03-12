@@ -1,9 +1,19 @@
 @import 'tailwindcss';
 @import 'fumadocs-ui/css/black.css';
 @import 'fumadocs-ui/css/preset.css';
+@plugin 'tailwindcss-animate';
 
 @theme inline {
   --default-mono-font-family: var(--font-mono);
+}
+
+:root {
+  --templates-color: hsl(262, 83%, 58%);
+  --cli-color: var(--color-fd-foreground);
+}
+
+.dark {
+  --templates-color: hsl(262, 100%, 78%);
 }
 
 html {
