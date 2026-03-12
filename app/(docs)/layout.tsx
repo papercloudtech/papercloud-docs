@@ -10,6 +10,7 @@ function getSection(path: string | undefined): string {
     {
       templates: 'templates',
       cli: 'cli',
+      images: 'images',
     }[dir] ?? 'templates'
   );
 }

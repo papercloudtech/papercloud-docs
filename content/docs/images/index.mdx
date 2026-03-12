@@ -1,0 +1,51 @@
+---
+title: Cloud Images
+description: Pre-built VM images for open source projects
+icon: Cpu
+---
+
+## Introduction
+
+PaperCloud Cloud Images are pre-built virtual machine images for popular open source projects, ready to deploy on major cloud providers.
+
+## Available Images
+
+import { Cards, Card } from 'fumadocs-ui/components/card';
+
+<Cards>
+  <Card title="Coming Soon" description="More cloud images will be added soon." />
+</Cards>
+
+## Supported Platforms
+
+- **AWS** — AMI (Amazon Machine Image)
+- **Azure** — Managed Image
+- **GCP** — Custom Image
+
+## Usage
+
+import { Tab, Tabs } from 'fumadocs-ui/components/tabs';
+
+<Tabs items={['Azure', 'AWS', 'GCP']}>
+<Tab value="Azure">
+
+```bash
+papercloud images deploy <image-name> --target azure
+```
+
+</Tab>
+<Tab value="AWS">
+
+```bash
+papercloud images deploy <image-name> --target aws
+```
+
+</Tab>
+<Tab value="GCP">
+
+```bash
+papercloud images deploy <image-name> --target gcp
+```
+
+</Tab>
+</Tabs>

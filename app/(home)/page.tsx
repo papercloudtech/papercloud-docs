@@ -7,7 +7,7 @@ export default function HomePage() {
       <p className="text-fd-muted-foreground mb-8">
         Choose a section to get started.
       </p>
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 w-full max-w-2xl">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 w-full max-w-3xl">
         <Link
           href="/cli"
           className="flex flex-col gap-2 rounded-lg border bg-fd-card p-6 transition-colors hover:bg-fd-accent"
@@ -24,6 +24,15 @@ export default function HomePage() {
           <h2 className="text-lg font-semibold">Templates</h2>
           <p className="text-sm text-fd-muted-foreground">
             Templates reference documentation.
+          </p>
+        </Link>
+        <Link
+          href="/images"
+          className="flex flex-col gap-2 rounded-lg border bg-fd-card p-6 transition-colors hover:bg-fd-accent"
+        >
+          <h2 className="text-lg font-semibold">Cloud Images</h2>
+          <p className="text-sm text-fd-muted-foreground">
+            Pre-built VM images for open source projects.
           </p>
         </Link>
       </div>

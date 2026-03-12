@@ -1,6 +1,86 @@
 ---
-title: CLI Reference
+title: QuickStart
 description: Command-line interface reference
+icon: Rocket
 ---
 
-Welcome to the CLI reference documentation.
+## Introduction
+
+PaperCloud CLI makes it easy to deploy cloud native opensource projects on major cloud providers with minimal config.
+
+## Prerequisites
+
+Cloud subscription in any major cloud subscription with previlage 
+
+
+## Automatic Installation
+
+import { Tab, Tabs } from 'fumadocs-ui/components/tabs';
+
+<Tabs items={['macOS/Linux', 'Windows']}>
+<Tab value="macOS/Linux">
+
+```bash
+curl -fsSL https://get.papercloud.dev | bash
+```
+
+</Tab>
+<Tab value="Windows">
+
+```powershell
+irm https://get.papercloud.dev/install.ps1 | iex
+```
+
+</Tab>
+</Tabs>
+
+After installation, verify it works:
+
+```bash
+papercloud --version
+```
+
+## Cloud Configuration
+
+
+### AWS
+Make sure to install AWS CLI
+### Azure
+Make sure to install Azure CLI
+
+### GCP
+Make sure to install GCP CLI
+
+
+## Self Host Private VPN
+
+Deploy private WireGuard VPN with [wg-easy](https://github.com/wg-easy/wg-easy) UI. Checkout the architecture [here](/templates/networking/wireguard).
+
+<Tabs items={['Azure', 'AWS', 'GCP']}>
+<Tab value="Azure">
+
+```bash
+papercloud deploy wireguard --name wireguard-vpn --target azure
+```
+</Tab>
+<Tab value="AWS">
+
+```bash
+papercloud deploy wireguard --name wireguard-vpn --target aws
+```
+</Tab>
+<Tab value="GCP">
+
+```bash
+papercloud deploy wireguard --name wireguard-vpn --target gcp
+```
+
+</Tab>
+</Tabs>
+
+
+<Callout>Make sure name is unique so that it won't collide with any existing infrastructure</Callout>
+
+
+
+

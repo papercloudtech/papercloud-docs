@@ -10,10 +10,12 @@
 :root {
   --templates-color: hsl(262, 83%, 58%);
   --cli-color: var(--color-fd-foreground);
+  --images-color: hsl(199, 89%, 48%);
 }
 
 .dark {
   --templates-color: hsl(262, 100%, 78%);
+  --images-color: hsl(199, 100%, 68%);
 }
 
 html {
