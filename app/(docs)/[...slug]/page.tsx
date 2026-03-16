@@ -5,6 +5,7 @@ import {
   DocsPage,
   DocsTitle,
   MarkdownCopyButton,
+  PageLastUpdate,
 } from 'fumadocs-ui/layouts/docs/page';
 import { notFound } from 'next/navigation';
 import { getMDXComponents } from '@/components/mdx';
@@ -19,9 +20,16 @@ export default async function Page(props: PageProps<'/[...slug]'>) {
 
   const MDX = page.data.body;
   const markdownUrl = `/llms.mdx/${[...page.slugs, 'index.mdx'].join('/')}`;
+  const filePath = `content/docs/${page.file.path}`;
+  const editUrl = `https://github.com/${gitConfig.user}/${gitConfig.repo}/blob/${gitConfig.branch}/${filePath}`;
 
   return (
-    <DocsPage toc={page.data.toc} full={page.data.full} tableOfContent={{ style: 'clerk' }}>
+    <DocsPage
+      toc={page.data.toc}
+      full={page.data.full}
+      tableOfContent={{ style: 'clerk' }}
+      breadcrumb={{ includePage: true }}
+    >
       <DocsTitle>{page.data.title}</DocsTitle>
       <DocsDescription className="mb-0">{page.data.description}</DocsDescription>
       <div className="flex flex-row gap-2 items-center border-b pb-6">
@@ -34,6 +42,15 @@ export default async function Page(props: PageProps<'/[...slug]'>) {
           })}
         />
       </DocsBody>
+      <a
+        href={editUrl}
+        rel="noreferrer noopener"
+        target="_blank"
+        className="w-fit border rounded-xl p-2 font-medium text-sm text-fd-secondary-foreground bg-fd-secondary transition-colors hover:text-fd-accent-foreground hover:bg-fd-accent"
+      >
+        Edit on GitHub
+      </a>
+      {page.data.lastModified && <PageLastUpdate date={new Date(page.data.lastModified)} />}
     </DocsPage>
   );
 }
