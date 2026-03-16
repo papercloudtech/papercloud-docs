@@ -20,7 +20,7 @@ export default async function Page(props: PageProps<'/[...slug]'>) {
 
   const MDX = page.data.body;
   const markdownUrl = `/llms.mdx/${[...page.slugs, 'index.mdx'].join('/')}`;
-  const filePath = `content/docs/${page.file.path}`;
+  const filePath = `content/docs/${page.path}`;
   const editUrl = `https://github.com/${gitConfig.user}/${gitConfig.repo}/blob/${gitConfig.branch}/${filePath}`;
 
   return (
